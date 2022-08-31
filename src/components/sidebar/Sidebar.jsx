@@ -1,6 +1,6 @@
 import "./sidebar.scss";
 import DashboardIcon from "@mui/icons-material/Dashboard";
-import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
+import PersonOutlineIcon from "@mui/icons-material/PersonOutlineOutlined";
 import CategoryOutlinedIcon from "@mui/icons-material/CategoryOutlined";
 import BookmarkBorderOutlinedIcon from "@mui/icons-material/BookmarkBorderOutlined";
 import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
@@ -11,12 +11,15 @@ import ExitToAppOutlinedIcon from "@mui/icons-material/ExitToAppOutlined";
 import SettingsSuggestOutlinedIcon from "@mui/icons-material/SettingsSuggestOutlined";
 import SettingsAccessibilityOutlinedIcon from "@mui/icons-material/SettingsAccessibilityOutlined";
 import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="top">
-        <span className="logo">Ammadmin</span>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <span className="logo">Ammadmin</span>
+        </Link>
       </div>
       <hr />
       <div className="center">
@@ -27,14 +30,18 @@ const Sidebar = () => {
             <span>Dashboard</span>
           </li>
           <p className="title">LISTS</p>
-          <li>
-            <PersonOutlineOutlinedIcon className="icon" />
-            <span>Users</span>
-          </li>
-          <li>
-            <CategoryOutlinedIcon className="icon" />
-            <span>Products</span>
-          </li>
+          <Link to="/users" style={{ textDecoration: "none" }}>
+            <li>
+              <PersonOutlineIcon className="icon" />
+              <span>Users</span>
+            </li>
+          </Link>
+          <Link to="/products" style={{ textDecoration: "none" }}>
+            <li>
+              <CategoryOutlinedIcon className="icon" />
+              <span>Products</span>
+            </li>
+          </Link>
           <li>
             <BookmarkBorderOutlinedIcon className="icon" />
             <span>Orders</span>
