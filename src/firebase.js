@@ -2,7 +2,7 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDYb2yIRl3Dnn3DPcq-vvf-prWbCsEpSOk",
+  apiKey: process.env.REACT_APP_FIREBASE_KEY,
   authDomain: "ammadmin-e2687.firebaseapp.com",
   projectId: "ammadmin-e2687",
   storageBucket: "ammadmin-e2687.appspot.com",
