@@ -35,7 +35,6 @@ function App() {
                 </RequireAuth>
               }
             />
-
             <Route path="/users">
               <Route
                 index
